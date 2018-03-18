@@ -20,9 +20,9 @@ public class CariGambar extends AppCompatActivity {
 
     //Deklarasi Komponen yang akan digunakan
     //EditText
-    private EditText txtImageURL;
+    private EditText ImageURL;
     //Button
-    private Button btnImageLoad;
+    private Button ImageLoad;
     //ImageView (gambar)
     private ImageView lblImage;
     //ProgressDialog(Loading)
@@ -38,11 +38,11 @@ public class CariGambar extends AppCompatActivity {
         setTitle("Cari Gambar");
 
         //Inisialisasi Komponen View
-        txtImageURL=(EditText)findViewById(R.id.txtImgURL);
-        btnImageLoad=(Button)findViewById(R.id.btnImgLoad);
+        ImageURL=(EditText)findViewById(R.id.ImgURL);
+        ImageLoad=(Button)findViewById(R.id.ImgLoad);
         lblImage=(ImageView)findViewById(R.id.lblImg);
         //Aksi Klik pada Tombol
-        btnImageLoad.setOnClickListener(new View.OnClickListener() {
+        ImageLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Memanggil Method yang dapat mengupdate
@@ -52,9 +52,9 @@ public class CariGambar extends AppCompatActivity {
 
         //Cek apakah bundle berisikan sesuatu
         if(saved!=null){
-            //Cek apakah didalm bundle nilai kunci sebagai penunjuk data sudah di load sebelumnya
+            //Cek apakah didalam bundle nilai kunci sebagai penunjuk data sudah di load sebelumnya
             if(saved.getInt("IMAGE_IS_LOADED")!=0 && !saved.getString("EXTRA_TEXT_URL").isEmpty()){
-                txtImageURL.setText(""+saved.getString("EXTRA_TEXT_URL"));
+                ImageURL.setText(""+saved.getString("EXTRA_TEXT_URL"));
                 loadImage();
             }
         }
@@ -66,7 +66,7 @@ public class CariGambar extends AppCompatActivity {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         //Simpan untuk URL TEXT agar input tidak dilakukan kembali
-        outState.putString("EXTRA_TEXT_URL",txtImageURL.getText().toString());
+        outState.putString("EXTRA_TEXT_URL",ImageURL.getText().toString());
         //Simpan untuk respon pada savedinstancestate
         outState.putInt("IMAGE_IS_LOADED",ImageIsLoaded);
     }
@@ -76,7 +76,7 @@ public class CariGambar extends AppCompatActivity {
 
     private void loadImage(){
         //Mengambil nilai input (String)
-        String ImgUrl = txtImageURL.getText().toString();
+        String ImgUrl = ImageURL.getText().toString();
         //Aksi Asynctask untuk melakukan pencarian/load gambar dari internet
         new LoadImageTask().execute(ImgUrl);
     }

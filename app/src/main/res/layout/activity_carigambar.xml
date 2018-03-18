@@ -21,7 +21,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/txtImgURL"
+            android:id="@+id/ImgURL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -33,7 +33,7 @@
             android:text="https://img00.deviantart.net/f13c/i/2013/178/6/3/nichkhun_buck_horvejkul_by_dwimgreat-d6aeqiv.jpg" />
 
         <Button
-            android:id="@+id/btnImgLoad"
+            android:id="@+id/ImgLoad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
