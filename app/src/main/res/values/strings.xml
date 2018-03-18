@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">IMadeDwimaGitaDirtana_1202150054_Modul4</string>
+
+    <string-array name="namaMhs">
+        <item>Dwima</item>
+        <item>Fikri</item>
+        <item>Adhi</item>
+        <item>Khania</item>
+        <item>Editha</item>
+        <item>Harri</item>
+        <item>Chyntya</item>
+        <item>Dwi</item>
+        <item>Tya</item>
+        <item>Rivaldy</item>
+        <item>Rama</item>
+        <item>Adi</item>
+        <item>Dea</item>
+        <item>Ratu</item>
+        <item>Silby</item>
+        <item>Indah</item>
+        <item>Ina</item>
+    </string-array>
+</resources>
